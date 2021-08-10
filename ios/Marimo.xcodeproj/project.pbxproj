@@ -114,7 +114,6 @@
 				0361654725D16B3EBB35EB87 /* Pods-Marimo-MarimoTests.debug.xcconfig */,
 				267C91DB600CC6196152B51E /* Pods-Marimo-MarimoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -485,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67FA65927V;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Marimo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67FA65927V;
 				INFOPLIST_FILE = Marimo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
