@@ -1,9 +1,13 @@
-import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {RNCamera, FaceDetector} from 'react-native-camera';
 import CameraRoll from '@react-native-community/cameraroll';
 
 const ExploreScreen = () => {
+  // for data to  send api
+  const [image, setImage] = useState('');
+  // for picture address
+  const [url, setUrl] = useState('');
   const cameraRef = React.useRef(null);
 
   const takePhoto = async () => {
@@ -14,10 +18,23 @@ const ExploreScreen = () => {
       });
       console.log('data', data.uri);
 
-      /*if (data) {
-        const result = await CameraRoll.save(data.uri);
-        console.log('result', result);
-      }*/
+      if (data) {
+        setUrl(await CameraRoll.save(data.uri));
+        console.log('result', url);
+      }
+    }
+  };
+
+  const getPhotos = async () => {
+    console.log('...');
+    try {
+      const {edges} = await CameraRoll.getPhotos({
+        first: 1,
+        assetType: 'Photos',
+      });
+      setImage(edges[0].node.image.uri);
+    } catch (error) {
+      console.log('getPhoto', error);
     }
   };
 
@@ -47,11 +64,19 @@ const ExploreScreen = () => {
             buttonNegative: 'Cancel',
           }}
         />
-
+        {image !== '' && (
+          <Image
+            key={1}
+            style={{width: 300, height: 100}}
+            source={{uri: image}}
+          />
+        )}
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           <TouchableOpacity
-            onPress={() => {
-              takePhoto();
+            onPress={async () => {
+              await takePhoto();
+              await getPhotos();
+              // post api
               console.log('hello');
             }}
             style={{
