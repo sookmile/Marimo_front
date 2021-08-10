@@ -1,13 +1,16 @@
 import * as React from 'react';
-import {View, Button, Text} from 'react-native';
+import {View, Text, Stylesheet, ImageBackground} from 'react-native';
 
 const HomeScreen = ({navigation}) => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
+    <View style={{flex: 1, zIndex: -1, display: 'flex'}}>
+      <ImageBackground
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+        source={require('../assets/main(ver3).png')}
+        resizeMode="cover"
       />
     </View>
   );
