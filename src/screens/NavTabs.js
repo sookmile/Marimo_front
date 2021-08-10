@@ -5,6 +5,7 @@ import HomeScreen from './HomeScreen';
 import GameScreen from './GameScreen';
 import {icons, COLORS} from '../constants/index';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import ExploreScreen from './ExploreScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -79,7 +80,7 @@ const NavTabs = () => {
       />
       <Tab.Screen
         name="Explore"
-        component={HomeScreen}
+        component={ExploreScreen}
         options={{
           tabBarIcon: ({focused}) => (
             <View style={{alignItems: 'center', justifyContent: 'center'}}>
