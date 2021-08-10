@@ -18,16 +18,13 @@ const Tab = createBottomTabNavigator();
 const NavTabs = () => {
   return (
     <Tab.Navigator
-      tabBarOptions={{
-        showLabel: false,
-        tabStyle: {
-          bottom: 0,
-          left: 0,
-          right: 0,
-          elevation: 0,
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          height: '10%',
           backgroundColor: COLORS.bgPurple,
-          borderTopColor: 'transparent',
-          height: 64,
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
         },
       }}>
       <Tab.Screen
@@ -35,14 +32,11 @@ const NavTabs = () => {
         component={HomeScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <View style={styles.container}>
               <Image
                 source={icons.home_ic}
                 resizeMode="contain"
-                style={{
-                  width: 40,
-                  height: 40,
-                }}
+                style={styles.icons}
               />
               <Text
                 style={{
@@ -60,11 +54,11 @@ const NavTabs = () => {
         component={GameScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <View style={styles.container}>
               <Image
                 source={icons.game_ic}
                 resizeMode="contain"
-                style={{width: 40, height: 40}}
+                style={styles.icons}
               />
               <Text
                 style={{
@@ -82,11 +76,11 @@ const NavTabs = () => {
         component={HomeScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <View style={styles.container}>
               <Image
                 source={icons.explore_ic}
                 resizeMode="contain"
-                style={{width: 40, height: 40}}
+                style={styles.icons}
               />
               <Text
                 style={{
@@ -104,11 +98,11 @@ const NavTabs = () => {
         component={HomeScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <View style={styles.container}>
               <Image
                 source={icons.Settings_ic}
                 resizeMode="contain"
-                style={{width: 40, height: 40}}
+                style={styles.icons}
               />
               <Text
                 style={{
@@ -124,5 +118,16 @@ const NavTabs = () => {
     </Tab.Navigator>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  icons: {
+    width: 50,
+    height: 50,
+  },
+});
 
 export default NavTabs;
