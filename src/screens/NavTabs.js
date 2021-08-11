@@ -6,7 +6,6 @@ import GameScreen from './GameScreen';
 import ExploreScreen from './ExploreScreen';
 import {icons, COLORS} from '../constants/index';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import ExploreScreen from './ExploreScreen';
 
 const Tab = createBottomTabNavigator();
 
