@@ -83,7 +83,7 @@ const ExploreScreen = () => {
             style={{width: '100%', height: '100%'}}
             captureAudio={false}
             type={RNCamera.Constants.Type.back}
-            flashMode={RNCamera.Constants.FlashMode.on}
+            flashMode={RNCamera.Constants.FlashMode.off}
             androidCameraPermissionOptions={{
               title: 'Permission to use camera',
               message: 'We need your permission to use your camera',
