@@ -7,6 +7,7 @@ import {icons, COLORS} from '../constants/index';
 import ExploreMain from './ExploreMain';
 import ExploreCamera from './ExploreCamera';
 import ExploreDetail from './ExploreDetail';
+import Settings from './Settings';
 
 const Tab = createBottomTabNavigator();
 
@@ -127,7 +128,7 @@ const NavTabs = () => {
       />
       <Tab.Screen
         name="Settings"
-        component={HomeScreen}
+        component={Settings}
         options={{
           tabBarIcon: ({focused}) => (
             <View style={styles.container}>

@@ -11,7 +11,7 @@ import {
 function SpellingGameResult({navigation}) {
   return (
     <View style={{flex: 1, zIndex: -1, display: 'flex'}}>
-      <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+      <TouchableOpacity onPress={() => navigation.navigate('GameRank')}>
         <Image
           style={{
             width: '100%',
