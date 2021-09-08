@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
-import StartMain from './StartMain';
-import SignUp from './SignUp';
-import Login from './Login';
-import Character from './Character';
-import ConfirmCh from './ConfirmCh';
+import StartMain from '../components/Start/StartMain';
+import SignUp from '../components/Start/SignUp';
+import Login from '../components/Start/Login';
+import Character from '../components/Start/Character';
+import ConfirmCh from '../components/Start/ConfirmCh';
 
 const StartStack = createStackNavigator();
 

@@ -8,7 +8,7 @@ const StoryLoading = ({navigation}) => {
             <View>
                 <Button
                 title="아니요, 다른 모험을 선택할래요!"
-                onPress={() => navigation.navigate('NavTab')}/>
+                onPress={() => navigation.navigate('StoryMain')}/>
             </View>
         </View>
     )

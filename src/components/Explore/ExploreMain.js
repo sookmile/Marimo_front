@@ -11,7 +11,7 @@ const ExploreMain = ({navigation}) => {
               width: '100%',
               height: '100%',
             }}
-            source={require('../assets/explore(ver3).png')}
+            source={require('../../assets/explore(ver3).png')}
             resizeMode="cover"
           />
         </TouchableOpacity>

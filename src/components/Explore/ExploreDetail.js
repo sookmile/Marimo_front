@@ -19,7 +19,7 @@ const ExploreDetail = ({navigation, route}) => {
               height: '100%',
               alignItems: 'center',
             }}
-            source={require('../assets/exploreResult.png')}
+            source={require('../../assets/exploreResult.png')}
             resizeMode="cover">
             <Image
               style={{

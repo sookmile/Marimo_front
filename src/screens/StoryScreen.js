@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
-import StoryLoading from './StoryLoading';
-import StoryMain from './StoryMain';
+import StoryLoading from '../components/Story/StoryLoading';
+import StoryMain from '../components/Story/StoryMain';
 
 const StoryStack = createStackNavigator();
 

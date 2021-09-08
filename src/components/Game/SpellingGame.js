@@ -8,16 +8,17 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-function SpellingGameResult({navigation}) {
+function SpellingGame({navigation}) {
   return (
     <View style={{flex: 1, zIndex: -1, display: 'flex'}}>
-      <TouchableOpacity onPress={() => navigation.navigate('GameRank')}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SpellingGameResult')}>
         <Image
           style={{
             width: '100%',
             height: '100%',
           }}
-          source={require('../assets/gameWFriendResult.png')}
+          source={require('../../assets/gameWFriend.png')}
           resizeMode="cover"
         />
       </TouchableOpacity>
@@ -25,4 +26,4 @@ function SpellingGameResult({navigation}) {
   );
 }
 
-export default SpellingGameResult;
+export default SpellingGame;

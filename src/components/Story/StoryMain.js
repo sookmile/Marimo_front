@@ -11,7 +11,7 @@ const StoryMain = ({navigation}) => {
           width: '100%',
           height: '100%',
         }}
-        source={require('../assets/main(ver3).png')}
+        source={require('../../assets/main(ver3).png')}
         resizeMode="cover"
       />
       </TouchableOpacity>

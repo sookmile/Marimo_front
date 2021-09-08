@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { COLORS } from '../constants';
-import ExploreMain from './ExploreMain';
-import ExploreCamera from './ExploreCamera';
-import ExploreDetail from './ExploreDetail';
+import ExploreMain from '../components/Explore/ExploreMain';
+import ExploreCamera from '../components/Explore/ExploreCamera';
+import ExploreDetail from '../components/Explore/ExploreDetail';
 
 const ExploreStack = createStackNavigator();
 

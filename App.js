@@ -13,9 +13,7 @@ import Settings from './src/screens/Settings';
 //Tabs
 import NavTab from './src/screens/NavTabs';
 
-
 const MainStack = createStackNavigator();
-
 
 const App = () => {
   useEffect(() => {
