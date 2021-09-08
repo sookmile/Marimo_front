@@ -1,29 +1,37 @@
-import * as React from 'react';
-import {
-  View,
-  Text,
-  Stylesheet,
-  Button,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import React from 'react';
+import { createStackNavigator } from "@react-navigation/stack";
 import SpellingGame from './SpellingGame';
+import SpellingGameResult from './SpellingGameResult';
+import GameRank from './GameResult';
+import GameMain from './GameMain';
 
-const GameScreen = ({navigation}) => {
-  return (
-    <View style={{flex: 1, zIndex: -1, display: 'flex'}}>
-      <TouchableOpacity onPress={() => navigation.navigate('SpellingGame')}>
-        <Image
-          style={{
-            width: '100%',
-            height: '100%',
-          }}
-          source={require('../assets/game(ver3).png')}
-          resizeMode="cover"
-        />
-      </TouchableOpacity>
-    </View>
-  );
-};
+const GameStack = createStackNavigator();
 
-export default GameScreen;
+const Game = () => {
+    return(
+      <GameStack.Navigator>
+        <GameStack.Screen
+            name="GameMain"
+            component={GameMain}
+            options={{headerShown: false}}
+          />
+        <GameStack.Screen
+            name="SpellingGame"
+            component={SpellingGame}
+            options={{headerShown: false}}
+          />
+          <GameStack.Screen
+            name="SpellingGameResult"
+            component={SpellingGameResult}
+            options={{headerShown: false}}
+          />
+          <GameStack.Screen
+            name="GameRank"
+            component={GameRank}
+            options={{headerShown: false}}
+          />
+      </GameStack.Navigator>
+    )
+  }
+
+  export default Game;

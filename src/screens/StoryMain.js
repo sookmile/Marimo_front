@@ -1,11 +1,11 @@
 import * as React from 'react';
 import {View, Text, Stylesheet, ImageBackground, TouchableOpacity} from 'react-native';
 
-const HomeScreen = ({navigation}) => {
+const StoryMain = ({navigation}) => {
   return (
     <View style={{flex: 1, zIndex: -1, display: 'flex'}}>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Loading')}>
+        onPress={() => navigation.navigate('StoryLoading')}>
       <ImageBackground
         style={{
           width: '100%',
@@ -19,4 +19,4 @@ const HomeScreen = ({navigation}) => {
   );
 };
 
-export default HomeScreen;
+export default StoryMain;

@@ -8,7 +8,7 @@ const GameRank = ({navigation}) => {
             <View>
                 <Button
                 title="홈으로 돌아가기"
-                onPress={() => navigation.navigate('NavTab')}/>
+                onPress={() => navigation.navigate('GameMain')}/>
             </View>
         </View>
     )

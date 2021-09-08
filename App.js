@@ -4,21 +4,18 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from 'react-native-splash-screen';
 
 //Screens
-import SpellingGame from './src/screens/SpellingGame';
-import SpellingGameResult from './src/screens/SpellingGameResult';
-import StartScreen from './src/screens/StartScreen';
-import SignUp from './src/screens/SignUp';
-import Login from './src/screens/Login';
-import Character from './src/screens/Character';
-import ConfirmCh from './src/screens/ConfirmCh';
-import StoryLoading from './src/screens/StoryLoading';
-import GameRank from './src/screens/GameResult';
+import Start from './src/screens/StartScreen';
+import Story from './src/screens/StoryScreen';
+import Game from './src/screens/GameScreen';
+import Explore from './src/screens/ExploreScreen';
 import Settings from './src/screens/Settings';
 
 //Tabs
 import NavTab from './src/screens/NavTabs';
 
-const Stack = createStackNavigator();
+
+const MainStack = createStackNavigator();
+
 
 const App = () => {
   useEffect(() => {
@@ -26,68 +23,44 @@ const App = () => {
   }, []);
   return (
     <NavigationContainer>
-      <Stack.Navigator
+      <MainStack.Navigator
         initialRouteName={'Home'}
         headerMode="none"
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen
+        <MainStack.Screen 
           name="Start"
-          component={StartScreen}
+          component={Start}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="SignUp"
-          component={SignUp}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Character"
-          component={Character}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="ConfirmCh"
-          component={ConfirmCh}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
+        <MainStack.Screen
           name="NavTab"
           component={NavTab}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="Loading"
-          component={StoryLoading}
+        <MainStack.Screen
+          name="Story"
+          component={Story}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="SpellingGame"
-          component={SpellingGame}
+        <MainStack.Screen
+        name="Game"
+        component={Game}
+        options={{headerShown: false}}
+      />
+        <MainStack.Screen
+          name="Explore"
+          component={Explore}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="SpellingGameResult"
-          component={SpellingGameResult}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="GameRank"
-          component={GameRank}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
+        
+        <MainStack.Screen
           name="Settings"
           component={Settings}
           options={{headerShown: false}}
         />
-      </Stack.Navigator>
+      </MainStack.Navigator>
     </NavigationContainer>
   );
 };

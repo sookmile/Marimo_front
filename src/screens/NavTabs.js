@@ -1,13 +1,12 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from './HomeScreen';
-import GameScreen from './GameScreen';
+import HomeScreen from './StoryMain';
 import {icons, COLORS} from '../constants/index';
-import ExploreMain from './ExploreMain';
-import ExploreCamera from './ExploreCamera';
-import ExploreDetail from './ExploreDetail';
 import Settings from './Settings';
+import Explore from './ExploreScreen';
+import Game from './GameScreen';
+import Story from './StoryScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,36 +17,6 @@ const Tab = createBottomTabNavigator();
   },
 };*/
 
-const Explore = () => {
-  return (
-    <Tab.Navigator
-      screenOptions={{
-        tabBarShowLabel: false,
-        tabBarStyle: {
-          height: '0%',
-          backgroundColor: COLORS.bgPurple,
-          borderTopLeftRadius: 20,
-          borderTopRightRadius: 20,
-        },
-      }}>
-      <Tab.Screen
-        name="Main"
-        component={ExploreMain}
-        options={{headerShown: false}}
-      />
-      <Tab.Screen
-        name="Camera"
-        component={ExploreCamera}
-        options={{headerShown: false}}
-      />
-      <Tab.Screen
-        name="Detail"
-        component={ExploreDetail}
-        options={{headerShown: false}}
-      />
-    </Tab.Navigator>
-  );
-};
 const NavTabs = () => {
   return (
     <Tab.Navigator
@@ -62,7 +31,7 @@ const NavTabs = () => {
       }}>
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={Story}
         options={{
           tabBarIcon: ({focused}) => (
             <View style={styles.container}>
@@ -84,7 +53,7 @@ const NavTabs = () => {
       />
       <Tab.Screen
         name="Game"
-        component={GameScreen}
+        component={Game}
         options={{
           tabBarIcon: ({focused}) => (
             <View style={styles.container}>
